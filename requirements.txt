@@ -1,0 +1,9 @@
+google-api-python-client
+sqlalchemy
+pymongo
+pandas
+numpy
+streamlit
+streamlit_option_menu
+requests
+numpy
