@@ -127,10 +127,10 @@ with data:
                     channel_name_to_find = option
                     channel_df, playlist_df,video_df, comment_df = NOSQL_TO_SQL(channel_name_to_find)
                     # Migrate data to SQL database
-                    channel_df.to_sql('channel_data', con=eng, if_exists='append', index=False)
-                    playlist_df.to_sql('playlist_data', con=eng, if_exists='append', index=False)
-                    video_df.to_sql('video_data', con=eng, if_exists='append', index=False)
-                    comment_df.to_sql('comment_data', con=eng, if_exists='append', index=False)
+                    channel_df.to_sql('channel_data', con=eng, if_exists='append', index=False,schema=None)
+                    playlist_df.to_sql('playlist_data', con=eng, if_exists='append', index=False,schema=None)
+                    video_df.to_sql('video_data', con=eng, if_exists='append', index=False,schema=None)
+                    comment_df.to_sql('comment_data', con=eng, if_exists='append', index=False,schema=None)
                     st.success(f"{channel_name_to_find} channel migrated successfully", icon='✅')
 
 
